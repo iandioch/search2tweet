@@ -14,7 +14,7 @@ access_token
 access_token_secret
 ```
 
-You can run the server with `python tweetserver.py`. It will spin up a shiny endpoint on port `5000`. It will tweet whatever you give it in a `tweet` POST field. 
+You can run the server with `python tweetserver.py`. It will spin up a shiny endpoint on port `5000`. It will tweet whatever you give the `/` route in a `tweet` POST field. However, you need to provide one of the tokens from the `tokens.txt` file in the `auth_token` field.
 
-TODO: add security :)
+You can add new tokens by POST-ing the `/add_token` endpoint, giving it a previously valid token in `auth_token`, and a new one in `new_token`. It will then add that new token to the `tokens.txt` file.
 
