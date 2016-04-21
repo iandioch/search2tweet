@@ -3,7 +3,7 @@ search2tweet server
 
 The server is written in Python 2. The dependencies can be installed with the following command:
 
-`pip install -r requirements.txt`
+`pip install -r requirements`
 
 The twitter auth data is in the file `twitter_auth.txt`, which must be formatted in the following way:
 
