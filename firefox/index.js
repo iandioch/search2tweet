@@ -16,7 +16,6 @@ tabs.on('ready', function(tab) {
         query = tab.title.substr(0, tab.title.lastIndexOf(' at'));
     }
     if(query.length > 0){
-        console.log(token);
         console.log(query);
         Request({
             url: "http://127.0.0.1:5000/",
