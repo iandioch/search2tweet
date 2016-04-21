@@ -1,0 +1,22 @@
+{
+  "title": "search2tweet firefox add-on",
+  "name": "firefox",
+  "version": "0.0.1",
+  "description": "Tweets what you search",
+  "main": "index.js",
+  "author": "iandioch",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ],
+  "preferences": [{
+    "name": "auth_token",
+    "type": "string",
+    "title": "auth token",
+    "value": "example_auth_token"
+  }]
+}
