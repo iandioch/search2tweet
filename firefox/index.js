@@ -5,12 +5,12 @@ var path = require("sdk/fs/path");
 var Request = require("sdk/request").Request;
 
 var token = require("sdk/simple-prefs").prefs.auth_token;
+var tweetUrl = require("sdk/simple-prefs").prefs.tweet_url;
 
 var tweetRequest = 
 tabs.on('ready', function(tab) {
     var query = '';
     if(tab.title.indexOf('Google Search') >= 0){
-        console.log(tab.title);
         query = tab.title.substr(0, tab.title.lastIndexOf(' -'));
     }else if(tab.title.indexOf('DuckDuckGo') >= 0){
         query = tab.title.substr(0, tab.title.lastIndexOf(' at'));
@@ -26,7 +26,7 @@ tabs.on('ready', function(tab) {
     if(query.length > 0){
         console.log(query);
         Request({
-            url: "http://127.0.0.1:5000/",
+            url: tweetUrl,
             content: "auth_token=" + encodeURIComponent(token) + "&tweet=" + encodeURIComponent(query),
             onComplete: function (response) {
                 console.log(response.text)
