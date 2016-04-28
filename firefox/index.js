@@ -14,6 +14,14 @@ tabs.on('ready', function(tab) {
         query = tab.title.substr(0, tab.title.lastIndexOf(' -'));
     }else if(tab.title.indexOf('DuckDuckGo') >= 0){
         query = tab.title.substr(0, tab.title.lastIndexOf(' at'));
+    }else if(tab.title.indexOf(' - Yahoo Search') >= 0){
+        query = tab.title.substr(0, tab.title.lastIndexOf(' -'));
+    }else if(tab.title.indexOf(' - Bing') >= 0){
+        query = tab.title.substr(0, tab.title.lastIndexOf(' -'));
+    }else if(tab.title.indexOf(', Ask Jeeves') >= 0){
+        query = tab.title.substr(0, tab.title.lastIndexOf(' ,'));
+    }else if(tab.title.indexOf(' - YouTube') >= 0){
+        query = tab.title.substr(0, tab.title.lastIndexOf(' -'));
     }
     if(query.length > 0){
         console.log(query);
