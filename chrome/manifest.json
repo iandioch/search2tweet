@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "search2tweet Chrome",
+    "description": "Tweets what you search.",
+    "version": "0.1",
+
+    "background": {
+        "page": "background.html"
+    },
+    "permissions": ["tabs", "<all_urls>"]
+}
